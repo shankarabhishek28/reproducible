@@ -6,9 +6,9 @@ import { Video } from 'expo-av';
 const Authenticated: React.FC = () => {
   const [hasAudioPermission, setHasAudioPermission] = useState<boolean>();
   const [hasCameraPermission, setHasCameraPermission] =useState<boolean>();
-  // const [camera, setCamera] = useState(null);
-  // const [record, setRecord] = useState(null);
-  // const [type, setType] = useState(Camera.Constants.Type.back);
+  const [camera, setCamera] = useState(null);
+  const [record, setRecord] = useState(null);
+  const [type, setType] = useState(Camera.Constants.Type.back);
   useEffect(()=>{
 (async()=>{
   const cameraPersmission = await Camera.requestCameraPermissionsAsync();
